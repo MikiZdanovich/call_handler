@@ -1,0 +1,9 @@
+watchdog
+psycopg2
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Bcrypt
+Flask-Restplus
+Flask-Script
+SQLAlchemy
+Flask

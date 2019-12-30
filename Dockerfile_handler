@@ -1,0 +1,9 @@
+FROM python:3-slim
+
+WORKDIR /Data_handler/
+
+RUN pip install --upgrade pip
+COPY ./requirements.txt /Data_handler/requirements.txt
+RUN pip install -r requirements.txt
+
+ADD . call_data_lake data_handle_service

@@ -7,14 +7,12 @@ ENV FLASK_APP "manage.py"
 ENV FLASK_ENV "development"
 ENV FLASK_DEBUG True
 
-WORKDIR /app
+WORKDIR /Api
 
 RUN pip install --upgrade pip
-COPY ./requirenments.txt /app/requirements.txt
+COPY ./requirements.txt /Api/requirements.txt
 RUN pip install -r requirements.txt
 
-ADD . /app/
-
-CMD python "app/service/data_monitoring.py"
+ADD . /Api/
 
 
