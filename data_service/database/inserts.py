@@ -2,12 +2,14 @@ from data_service.database.models.tariff import Tariff
 from data_service.database import session
 
 
-LTE = Tariff(band_type="LTE", price=100)
-CDMA = Tariff(band_type="CDMA", price=50)
-GSM = Tariff(band_type="GSM", price=20)
+def seed_test_tariff():
+    lte = Tariff(band_type="LTE", price=100)
+    cdma = Tariff(band_type="CDMA", price=50)
+    gsm = Tariff(band_type="GSM", price=20)
 
-session.add(LTE)
-session.add(CDMA)
-session.add(GSM)
+    session.add(lte)
+    session.add(cdma)
+    session.add(gsm)
 
-session.commit()
+    session.commit()
+    return "Tariff DB seeded"
