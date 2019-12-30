@@ -9,7 +9,8 @@ simple app that allow to handle call data file from dir and store it to db, plus
 # To seed db with test Tariff data:
 -python manage.py seed_db
 
-# To start monitoring of incomeing data files  run - python manage.py data_handle, or python "data_service/data_handle_service/data_monitoring.py"
+# To start monitoring of incomeing data files:
+- python manage.py data_handle, or python "data_service/data_handle_service/data_monitoring.py"
 
 # To start generating test call data:
 -python manage.py test_data, or test_data_generator.py
