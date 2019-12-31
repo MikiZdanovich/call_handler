@@ -6,7 +6,7 @@ from app import create_app, db
 from app.service.call_service import get_saved_data
 from data_service.data_handle_service.data_monitoring import monitoring
 from test_data_generator import generate_data
-from data_service.database.inserts import seed_test_tariff
+from inserts import seed_test_tariff
 
 app = create_app(os.getenv('BOILERPLATE_ENV') or 'dev')
 

@@ -26,7 +26,7 @@ def random_band():
     return random.choice(bands)
 
 
-def generate_data( number_of_file=0, sleep_timer=1, ):
+def generate_data(number_of_file=0, sleep_timer=1, ):
     for i in range(number_of_file):
         data = {"number_in": f"{random_string_digits()}",
                 "number_out": f"{random_string_digits()}",
@@ -38,4 +38,6 @@ def generate_data( number_of_file=0, sleep_timer=1, ):
             file.write(serialized)
         sleep(sleep_timer)
 
-generate_data(5,1)
+
+if __name__ == "__main__":
+    generate_data(5, 1)
